@@ -9,6 +9,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Four card feature section</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -30,11 +35,104 @@
     }
 
     header {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      /* flex-direction: column; */
       height: 100%;
-      align-items: center;
+      /* align-items: center; */
+      text-align: center;
       margin: 5%;
+      color: var(--Grey500);
+    }
+
+    .heading {
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+      font-size: xx-large;
+    }
+
+    .subheading {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: xx-large;
+    }
+
+    .description {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: medium;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      /* grid-template-rows: 1fr; */
+    }
+
+    .supervisor-card,
+    .karma-card,
+    .team-card,
+    .calc-card {
+      width: 250px;
+      height: 200px;
+      border-radius: 2px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      color: var(--Grey500);
+    }
+
+
+    .supervisor-card {
+      border-top: 4px solid var(--Cyan);
+    }
+
+    .karma-card {
+      border-top: 4px solid var(--Red);
+    }
+
+    .team-card {
+      border-top: 4px solid var(--Orange);
+    }
+
+    .calc-card {
+      border-top: 4px solid var(--Blue);
+    }
+
+    .supervisor-card-header,
+    .karma-card-header,
+    .team-card-header,
+    .calc-card-header {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: medium;
+      padding-top: 20px;
+      padding-left: 20px;
+      /* text-align: center; */
+    }
+
+    .supervisor-card-role,
+    .karma-card-role,
+    .team-card-role,
+    .calc-card-role {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: small;
+      padding-left: 20px;
+      /* text-align: center; */
+    }
+
+    .supervisor-icon,
+    .karma-icon,
+    .team-icon,
+    .calculator-icon {
+      padding-top: 20px;
+      padding-right: 20px;
+      float: inline-end;
+      /* text-align: center; */
     }
   </style>
 </head>
@@ -51,29 +149,51 @@
       </div>
     </header>
     <div class="cards">
-      <div class="supervisor-card">
+      <div class="supervisor-card col1">
         <div class="supervisor-card-header">
           Supervisor
         </div>
-        Monitors activity to identify project roadblocks
-      </div>
-      <div class="team-card">
-        <div class="team-card-header">
-          Team Builder
+        <div class="supervisor-card-role">
+          Monitors activity to identify project roadblocks
         </div>
-        Scans our talent network to create the optimal team for your project
-      </div>
-      <div class="karma-card">
-        <div class="karma-card-header">
-          Karma
+        <div class="supervisor-icon">
+          <img src="./images/icon-supervisor.svg" class="img-supervisor-icon" alt="supervisorIcon">
         </div>
-        Regularly evaluates our talent to ensure quality
       </div>
-      <div class="calc-card">
+      <div class="col2">
+        <div class="team-card">
+          <div class="team-card-header">
+            Team Builder
+          </div>
+          <div class="team-card-role">
+            Scans our talent network to create the optimal team for your project
+          </div>
+          <div class="team-icon">
+            <img src="./images/icon-team-builder.svg" class="img-team-icon" alt="teamIcon">
+          </div>
+        </div>
+        <div class="karma-card">
+          <div class="karma-card-header">
+            Karma
+          </div>
+          <div class="karma-card-role">
+            Regularly evaluates our talent to ensure quality
+          </div>
+          <div class="karma-icon">
+            <img src="./images/icon-karma.svg" class="img-karma-icon" alt="karmaIcon">
+          </div>
+        </div>
+      </div>
+      <div class="calc-card col3">
         <div class="calc-card-header">
           Calculator
         </div>
-        Uses data from past projects to provide better delivery estimates
+        <div class="calc-card-role">
+          Uses data from past projects to provide better delivery estimates
+        </div>
+        <div class="calculator-icon">
+          <img src="./images/icon-calculator.svg" class="img-Calculator-icon" alt="CalculatorIcon">
+        </div>
       </div>
     </div>
   </div>
