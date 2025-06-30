@@ -69,6 +69,13 @@
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      height: 100%;
+      /* grid-gap: 20px; */
+      padding-left: 120px;
+      padding-right: 120px;
       /* grid-template-rows: 1fr; */
     }
 
@@ -76,7 +83,7 @@
     .karma-card,
     .team-card,
     .calc-card {
-      width: 250px;
+      width: 300px;
       height: 200px;
       border-radius: 2px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -86,18 +93,32 @@
 
     .supervisor-card {
       border-top: 4px solid var(--Cyan);
+      /* margin-left: 25%; */
+      grid-column: 1;
+      grid-row: 1 / 3;
+      align-self: center;
+      /* margin-top: 100px; */
     }
 
     .karma-card {
       border-top: 4px solid var(--Red);
+      margin-top: 25px;
+      grid-column: 2;
+      grid-row: 2;
     }
 
     .team-card {
       border-top: 4px solid var(--Orange);
+      grid-column: 2;
+      grid-row: 1;
     }
 
     .calc-card {
       border-top: 4px solid var(--Blue);
+      /* margin-left: -10px; */
+      grid-column: 3;
+      grid-row: 1/span 2;
+      /* margin-top: 100px; */
     }
 
     .supervisor-card-header,
@@ -160,30 +181,30 @@
           <img src="./images/icon-supervisor.svg" class="img-supervisor-icon" alt="supervisorIcon">
         </div>
       </div>
-      <div class="col2">
-        <div class="team-card">
-          <div class="team-card-header">
-            Team Builder
-          </div>
-          <div class="team-card-role">
-            Scans our talent network to create the optimal team for your project
-          </div>
-          <div class="team-icon">
-            <img src="./images/icon-team-builder.svg" class="img-team-icon" alt="teamIcon">
-          </div>
+      <!-- <div class="col2"> -->
+      <div class="team-card">
+        <div class="team-card-header">
+          Team Builder
         </div>
-        <div class="karma-card">
-          <div class="karma-card-header">
-            Karma
-          </div>
-          <div class="karma-card-role">
-            Regularly evaluates our talent to ensure quality
-          </div>
-          <div class="karma-icon">
-            <img src="./images/icon-karma.svg" class="img-karma-icon" alt="karmaIcon">
-          </div>
+        <div class="team-card-role">
+          Scans our talent network to create the optimal team for your project
+        </div>
+        <div class="team-icon">
+          <img src="./images/icon-team-builder.svg" class="img-team-icon" alt="teamIcon">
         </div>
       </div>
+      <div class="karma-card">
+        <div class="karma-card-header">
+          Karma
+        </div>
+        <div class="karma-card-role">
+          Regularly evaluates our talent to ensure quality
+        </div>
+        <div class="karma-icon">
+          <img src="./images/icon-karma.svg" class="img-karma-icon" alt="karmaIcon">
+        </div>
+      </div>
+      <!-- </div> -->
       <div class="calc-card col3">
         <div class="calc-card-header">
           Calculator
